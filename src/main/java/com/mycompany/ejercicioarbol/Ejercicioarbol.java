@@ -28,9 +28,9 @@ public class Ejercicioarbol {
         if (nodo == null) {
             return new Nodo(persona);
         }
-        if (persona.edad < nodo.persona.edad) {  // Menores a la derecha
+        if (persona.edad < nodo.persona.edad) {  
             nodo.derecha = insertarR(nodo.derecha, persona);
-        } else {  // Mayores o iguales a la izquierda
+        } else {  
             nodo.izquierda = insertarR(nodo.izquierda, persona);
         }
         return nodo;
@@ -50,7 +50,6 @@ public class Ejercicioarbol {
         if (nodo != null) {
             inorden(nodo.izquierda);           
             
-            // Agregar si la persona es mayor o menor de edad
             String mensaje = nodo.persona.toString() + 
                              (nodo.persona.edad >= 18 ? " Es Mayor de edad" : " Es Menor de edad");
             JOptionPane.showMessageDialog(null, mensaje);
